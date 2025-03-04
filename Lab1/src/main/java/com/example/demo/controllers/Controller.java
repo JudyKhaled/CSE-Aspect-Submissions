@@ -16,6 +16,7 @@ public class Controller {
         return "POST response";
     }
 
+
     @PutMapping
     public String putData() {
         return "PUT response";
