@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
 
-    @Before("execution(* com.example.demo.controllers.Controller.*(..))")  // FIXED
+    @Before("execution(* com.example.demo.controllers.Controller.*(..))")
     public void logBefore(JoinPoint joinPoint) {
         System.out.println(">>> Aspect Triggered Before Method: " + joinPoint.getSignature().getName());
     }
