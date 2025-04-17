@@ -3,21 +3,22 @@ version: '3.1'
 services:
   mysql:
     image: mysql:8.0
-    container_name: lab5_mysql
+    container_name: lab3db_mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: lab5
+      MYSQL_DATABASE: lab3db
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     ports:
-      - "3306:3306"
+      - "3307:3306"
+
     volumes:
       - mysql_data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: lab5_phpmyadmin
+    container_name: lab3db_phpmyadmin
     restart: always
     ports:
       - "8081:80"
