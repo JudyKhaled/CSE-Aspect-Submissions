@@ -19,6 +19,7 @@ public class Event {
     private String location;
     private String description;
 
+
     @ManyToOne
     @JoinColumn(name = "host_id")
     private User host;
